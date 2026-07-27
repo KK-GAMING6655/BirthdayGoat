@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BirthdayGoat | Discord Birthday Bot</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo" id="nav-logo">
+        <span class="logo-icon">🍰</span>
+        <span class="logo-text">Birthday<span class="highlight">Goat</span></span>
+      </div>
+
+      <div class="nav-actions">
+        <a href="YOUR_DISCORD_BOT_INVITE_LINK_HERE" target="_blank" class="btn-invite">
+          <i class="fa-brands fa-discord"></i> Invite Bot
+        </a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="dropdown-menu" id="dropdown-menu">
+      <a href="#" id="nav-commands-btn"><i class="fa-solid fa-terminal"></i> Commands</a>
+      <a href="YOUR_TOP_GG_VOTE_LINK_HERE" target="_blank"><i class="fa-solid fa-check-to-slot"></i> Vote</a>
+      <a href="YOUR_DISCORD_SUPPORT_SERVER_LINK_HERE" target="_blank"><i class="fa-solid fa-headset"></i> Support</a>
+    </div>
+  </header>
+
+  <main id="page-home" class="page active">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge"><i class="fa-solid fa-sparkles"></i> Ultimate Discord Birthday Bot</div>
+        <h1>Never Miss a Birthday in Your Server <span class="gradient-text">Again!</span></h1>
+        <p>BirthdayGoat automates birthday announcements with fully customizable embeds, timezones, and seamless member registration.</p>
+        <div class="hero-buttons">
+          <a href="YOUR_DISCORD_BOT_INVITE_LINK_HERE" target="_blank" class="btn btn-primary">
+            <i class="fa-brands fa-discord"></i> Add to Discord
+          </a>
+          <button id="hero-commands-btn" class="btn btn-secondary">
+            <i class="fa-solid fa-code"></i> View Commands
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Why Choose <span class="gradient-text">BirthdayGoat?</span></h2>
+        <div class="features-grid">
+          
+          <div class="feature-card">
+            <div class="card-icon"><i class="fa-solid fa-clock"></i></div>
+            <h3>Automated Daily Wishes</h3>
+            <p>Automatically sends birthday wishes at standard UTC/GMT midnight every day without any manual effort.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3>Custom Embed Messages</h3>
+            <p>Customize embed titles, descriptions, custom stickers, ping roles, thumbnail images, and hex colors easily.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-icon"><i class="fa-solid fa-user-check"></i></div>
+            <h3>Simple Member Commands</h3>
+            <p>Members can easily register, list, or update their birthdays using clean Slash (`/`) commands.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Reliable Data Storage</h3>
+            <p>Powered by high-performance Turso cloud databases to ensure no user birthday is ever lost.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <main id="page-commands" class="page">
+    <div class="container">
+      
+      <div class="back-bar">
+        <button id="back-home-btn" class="btn-back">
+          <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </button>
+      </div>
+
+      <div class="commands-header">
+        <h1>Bot <span class="gradient-text">Commands</span></h1>
+        <p>Explore all available member and administrator commands for BirthdayGoat.</p>
+      </div>
+
+      <section class="command-group">
+        <h2 class="group-title"><i class="fa-solid fa-user"></i> Member Commands</h2>
+        <div class="commands-grid">
+
+          <div class="command-card">
+            <div class="command-syntax">/birthday register</div>
+            <div class="command-args">&lt;day&gt; &lt;month&gt; [year]</div>
+            <p class="command-desc">Register your birthday date with optional birth year.</p>
+          </div>
+
+          <div class="command-card">
+            <div class="command-syntax">/birthday remove</div>
+            <p class="command-desc">Remove your registered birthday from the server database.</p>
+          </div>
+
+          <div class="command-card">
+            <div class="command-syntax">/birthday list</div>
+            <p class="command-desc">Displays an organized list of all member birthdays in the server.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="command-group">
+        <h2 class="group-title"><i class="fa-solid fa-shield-halved"></i> Owner & Admin Commands</h2>
+        <div class="commands-grid">
+
+          <div class="command-card admin">
+            <div class="command-syntax">/set channel</div>
+            <div class="command-args">&lt;#channel&gt;</div>
+            <p class="command-desc">Sets the text channel where daily birthday announcements will be sent.</p>
+          </div>
+
+          <div class="command-card admin">
+            <div class="command-syntax">/set ping</div>
+            <div class="command-args">&lt;@role&gt;</div>
+            <p class="command-desc">Sets a role to ping when sending a birthday announcement.</p>
+          </div>
+
+          <div class="command-card admin">
+            <div class="command-syntax">/set message</div>
+            <div class="command-args">[heading] [description] [image_url] [colour] ...</div>
+            <p class="command-desc">Customize embed headers, footer text, hex colors, images, and thumbnails.</p>
+          </div>
+
+          <div class="command-card admin">
+            <div class="command-syntax">/birthday test</div>
+            <p class="command-desc">Instantly sends a sample birthday message embed to test settings.</p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 BirthdayGoat. Powered by Discord.py.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
